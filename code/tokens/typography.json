@@ -1,0 +1,52 @@
+{
+  "description": "AbuChip typography tokens. Geist Sans for everything; Geist Mono only for numbers, data labels, and code. Headlines are oversized and tight; body is generous and readable.",
+  "fontFamily": {
+    "sans": ["Geist", "Geist Sans", "Inter", "system-ui", "-apple-system", "sans-serif"],
+    "mono": ["Geist Mono", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
+    "_usage": "Sans for UI, body, headlines. Mono only for numerals, data labels, and inline code."
+  },
+  "fontSize": {
+    "xs":       { "px": 12, "rem": "0.75rem",  "lineHeight": 1.5  },
+    "sm":       { "px": 14, "rem": "0.875rem", "lineHeight": 1.55 },
+    "base":     { "px": 16, "rem": "1rem",     "lineHeight": 1.6  },
+    "lg":       { "px": 18, "rem": "1.125rem", "lineHeight": 1.55 },
+    "xl":       { "px": 20, "rem": "1.25rem",  "lineHeight": 1.5  },
+    "2xl":      { "px": 24, "rem": "1.5rem",   "lineHeight": 1.35 },
+    "3xl":      { "px": 30, "rem": "1.875rem", "lineHeight": 1.25 },
+    "4xl":      { "px": 36, "rem": "2.25rem",  "lineHeight": 1.15 },
+    "5xl":      { "px": 48, "rem": "3rem",     "lineHeight": 1.1  },
+    "6xl":      { "px": 60, "rem": "3.75rem",  "lineHeight": 1.05 },
+    "7xl":      { "px": 72, "rem": "4.5rem",   "lineHeight": 1.05 },
+    "8xl":      { "px": 96, "rem": "6rem",     "lineHeight": 1.0  }
+  },
+  "fontWeight": {
+    "regular":  400,
+    "medium":   500,
+    "semibold": 600,
+    "bold":     700,
+    "_usage": "Headlines use semibold; running body uses regular; data labels use medium."
+  },
+  "tracking": {
+    "tight":  "-0.02em",
+    "normal":  "0",
+    "wide":    "0.04em",
+    "_usage": "Headlines tight. Mono labels wide. Body normal."
+  },
+  "headlines": {
+    "display": { "size": "clamp(2.5rem, 7vw, 6rem)", "weight": 600, "tracking": "-0.02em", "leading": 1.05 },
+    "h1":      { "size": "clamp(2rem, 5vw, 3.75rem)", "weight": 600, "tracking": "-0.02em", "leading": 1.1  },
+    "h2":      { "size": "clamp(1.5rem, 3.5vw, 2.25rem)", "weight": 600, "tracking": "-0.015em", "leading": 1.2 },
+    "h3":      { "size": "1.5rem", "weight": 600, "tracking": "-0.01em", "leading": 1.3 },
+    "h4":      { "size": "1.25rem", "weight": 600, "tracking": "0", "leading": 1.4 },
+    "_usage": "All headlines are clamp() so they scale fluidly between mobile and desktop without breakpoints."
+  },
+  "body": {
+    "default": { "size": "1rem", "weight": 400, "leading": 1.6 },
+    "lead":    { "size": "1.25rem", "weight": 400, "leading": 1.55 },
+    "small":   { "size": "0.875rem", "weight": 400, "leading": 1.55 }
+  },
+  "label": {
+    "default": { "family": "mono", "size": "0.75rem", "weight": 500, "tracking": "0.04em", "transform": "uppercase" },
+    "_usage": "Section eyebrows, KPI labels, axis labels, table column headers."
+  }
+}

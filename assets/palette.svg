@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-label="AbuChip palette swatch sheet">
+  <title>AbuChip palette</title>
+
+  <rect width="1200" height="720" fill="#FAFAF9"/>
+
+  <!-- Header -->
+  <text x="60" y="80" font-family="Geist Mono, ui-monospace, monospace" font-size="14" font-weight="500" letter-spacing="2" fill="#2563EB">ABUCHIP · PALETTE</text>
+  <text x="60" y="140" font-family="Geist, Inter, system-ui, sans-serif" font-size="56" font-weight="600" fill="#0F172A" letter-spacing="-1.5">One accent. Two neutrals. One reserve.</text>
+  <line x1="60" y1="180" x2="1140" y2="180" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Primary cobalt ramp -->
+  <text x="60" y="225" font-family="Geist Mono, ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2" fill="#0F172A">PRIMARY · COBALT</text>
+  <g transform="translate(60,245)">
+    <rect x="0"   y="0" width="120" height="100" fill="#EFF4FF" rx="2"/>
+    <rect x="124" y="0" width="120" height="100" fill="#DBE6FE" rx="2"/>
+    <rect x="248" y="0" width="120" height="100" fill="#93B4FD" rx="2"/>
+    <rect x="372" y="0" width="120" height="100" fill="#608CFA" rx="2"/>
+    <rect x="496" y="0" width="120" height="100" fill="#3B6CF6" rx="2"/>
+    <rect x="620" y="0" width="120" height="100" fill="#2563EB" rx="2"/>
+    <rect x="744" y="0" width="120" height="100" fill="#1D4FD7" rx="2"/>
+    <rect x="868" y="0" width="120" height="100" fill="#1E41AE" rx="2"/>
+    <rect x="992" y="0" width="120" height="100" fill="#1E3A8A" rx="2"/>
+
+    <text x="0"   y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">50</text>
+    <text x="124" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">100</text>
+    <text x="248" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">300</text>
+    <text x="372" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">400</text>
+    <text x="496" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">500</text>
+    <text x="620" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" font-weight="600" fill="#2563EB">600 ★</text>
+    <text x="744" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">700</text>
+    <text x="868" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">800</text>
+    <text x="992" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#475569">900</text>
+
+    <text x="620" y="138" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">#2563EB</text>
+  </g>
+
+  <!-- Neutrals -->
+  <text x="60" y="425" font-family="Geist Mono, ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2" fill="#0F172A">NEUTRALS · INK + PAPER + RULE</text>
+  <g transform="translate(60,445)">
+    <rect x="0"   y="0" width="200" height="100" fill="#0F172A" rx="2"/>
+    <rect x="210" y="0" width="200" height="100" fill="#475569" rx="2"/>
+    <rect x="420" y="0" width="200" height="100" fill="#FAFAF9" rx="2" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="630" y="0" width="200" height="100" fill="#FFFFFF" rx="2" stroke="#E2E8F0" stroke-width="1"/>
+    <rect x="840" y="0" width="200" height="100" fill="#E2E8F0" rx="2"/>
+
+    <text x="0"   y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">INK · #0F172A</text>
+    <text x="210" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">INK MUTED · #475569</text>
+    <text x="420" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">PAPER · #FAFAF9</text>
+    <text x="630" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">PAPER RAISED · #FFFFFF</text>
+    <text x="840" y="120" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">RULE · #E2E8F0</text>
+  </g>
+
+  <!-- Reserve / chart-only -->
+  <text x="60" y="615" font-family="Geist Mono, ui-monospace, monospace" font-size="11" font-weight="500" letter-spacing="2" fill="#0F172A">RESERVE · CHART SECOND-SERIES ONLY</text>
+  <g transform="translate(60,635)">
+    <rect x="0" y="0" width="200" height="60" fill="#EA580C" rx="2"/>
+    <text x="0" y="80" font-family="Geist Mono, ui-monospace, monospace" font-size="10" fill="#0F172A">AMBER · #EA580C — never decorative</text>
+  </g>
+</svg>

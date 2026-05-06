@@ -1,0 +1,76 @@
+{
+  "description": "AbuChip spacing, radius, shadow, and breakpoint tokens. Sharp corners (2px) carry the bold-modern signature. No soft shadows.",
+  "spacing": {
+    "0":  "0",
+    "px": "1px",
+    "0.5": "0.125rem",
+    "1":  "0.25rem",
+    "2":  "0.5rem",
+    "3":  "0.75rem",
+    "4":  "1rem",
+    "5":  "1.25rem",
+    "6":  "1.5rem",
+    "8":  "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem",
+    "32": "8rem",
+    "40": "10rem",
+    "48": "12rem",
+    "64": "16rem",
+    "_usage": "Use 4px multiples (0.25rem). Compose layouts on a 4-point grid."
+  },
+  "radius": {
+    "none":   "0",
+    "sm":     "2px",
+    "DEFAULT":"2px",
+    "md":     "2px",
+    "lg":     "2px",
+    "_usage": "Sharp corners are the AbuChip signature. 2px on buttons and cards. 0 on dividers, image frames, and chart axes. Never pill-shaped."
+  },
+  "borderWidth": {
+    "0":      "0",
+    "DEFAULT":"1px",
+    "2":      "2px",
+    "4":      "4px",
+    "_usage": "1px rules in slate-200. Never use 3px or odd values."
+  },
+  "shadow": {
+    "none":  "none",
+    "sm":    "0 1px 2px 0 rgb(15 23 42 / 0.06)",
+    "DEFAULT":"0 2px 4px 0 rgb(15 23 42 / 0.08)",
+    "md":    "0 4px 8px -2px rgb(15 23 42 / 0.10)",
+    "_usage": "Use shadows sparingly — only on raised cards and floating UI. Do not stack with borders."
+  },
+  "breakpoint": {
+    "sm":  "640px",
+    "md":  "768px",
+    "lg":  "1024px",
+    "xl":  "1280px",
+    "2xl": "1536px",
+    "_usage": "Mobile baseline is 390px (iPhone). Verify every layout there before declaring done."
+  },
+  "tapTarget": {
+    "min":         "40px",
+    "recommended": "44px",
+    "_usage": "Apple HIG: 44pt minimum tap target. Never let interactive elements drop below 40px on mobile."
+  },
+  "container": {
+    "sm":     "640px",
+    "md":     "768px",
+    "lg":     "1024px",
+    "xl":     "1200px",
+    "2xl":    "1320px",
+    "prose":  "65ch",
+    "_usage": "prose width caps reading line length. Use for body copy in reports."
+  },
+  "deck": {
+    "aspect":    "16 / 9",
+    "width":     "1920px",
+    "height":    "1080px",
+    "padding":   "5rem",
+    "_usage": "Slides are 1920x1080 by default. Padding kept generous so headlines breathe."
+  }
+}

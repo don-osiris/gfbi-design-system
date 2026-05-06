@@ -1,0 +1,27 @@
+{
+  "name": "abuchip-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AbuChip — bold-modern design system with electric cobalt accent, Geist typography, and sharp 2px corners. Reusable across landing sites, pitch decks, one-page reports, and embedded charts.",
+  "main": "components/index.ts",
+  "scripts": {
+    "build": "echo 'Token-driven Tailwind theme. Import components/* directly into your Next.js or Vite project.'"
+  },
+  "peerDependencies": {
+    "react":      ">=18.0.0",
+    "react-dom":  ">=18.0.0",
+    "tailwindcss":">=3.4.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "typescript":  "^5.0.0"
+  },
+  "abuchip": {
+    "tokens": "./tokens",
+    "components": "./components",
+    "fonts": ["Geist", "Geist Mono"],
+    "primaryAccent": "#2563EB",
+    "ink": "#0F172A",
+    "paper": "#FAFAF9"
+  }
+}

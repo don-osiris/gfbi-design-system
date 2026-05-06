@@ -1,0 +1,61 @@
+{
+  "$schema": "https://design-tokens.io/schema.json",
+  "description": "AbuChip color tokens. Single accent (cobalt) on neutral ink + paper. Amber appears only as the second series in two-series charts.",
+  "primary": {
+    "50":  "#EFF4FF",
+    "100": "#DBE6FE",
+    "200": "#BFD3FE",
+    "300": "#93B4FD",
+    "400": "#608CFA",
+    "500": "#3B6CF6",
+    "600": "#2563EB",
+    "700": "#1D4FD7",
+    "800": "#1E41AE",
+    "900": "#1E3A8A",
+    "DEFAULT": "#2563EB"
+  },
+  "ink": {
+    "50":  "#F8FAFC",
+    "100": "#F1F5F9",
+    "200": "#E2E8F0",
+    "300": "#CBD5E1",
+    "400": "#94A3B8",
+    "500": "#64748B",
+    "600": "#475569",
+    "700": "#334155",
+    "800": "#1E293B",
+    "900": "#0F172A",
+    "DEFAULT": "#0F172A"
+  },
+  "paper": {
+    "DEFAULT": "#FAFAF9",
+    "raised": "#FFFFFF",
+    "sunken": "#F5F5F4"
+  },
+  "rule": {
+    "DEFAULT": "#E2E8F0",
+    "strong": "#CBD5E1"
+  },
+  "amber": {
+    "300": "#FDBA74",
+    "500": "#F97316",
+    "600": "#EA580C",
+    "DEFAULT": "#EA580C",
+    "_usage": "Charts only. Reserved for the second series in two-series visualizations."
+  },
+  "semantic": {
+    "success": "#059669",
+    "warning": "#D97706",
+    "error":   "#DC2626",
+    "_usage": "Reserved for status indicators. Do not use as decorative color."
+  },
+  "chart": {
+    "sequential": ["#2563EB", "#608CFA", "#93B4FD", "#BFD3FE", "#E2E8F0"],
+    "twoSeries":  ["#2563EB", "#EA580C"],
+    "_usage": "sequential = monochrome cobalt ramp for ordered/quantitative data. twoSeries = the only acceptable bichromatic chart pairing."
+  },
+  "gradients": {
+    "hero": "linear-gradient(135deg, #2563EB 0%, #4338CA 100%)",
+    "_usage": "The single approved gradient. Used only on landing-page hero blocks. No gradients elsewhere."
+  }
+}
