@@ -1,6 +1,6 @@
 {
   "$schema": "https://design-tokens.io/schema.json",
-  "description": "AbuChip color tokens. Single accent (cobalt) on neutral ink + paper. Amber appears only as the second series in two-series charts.",
+  "description": "GFBI color tokens. Single accent (cobalt) on neutral ink + paper. Amber appears only as the second series in two-series charts.",
   "primary": {
     "50":  "#EFF4FF",
     "100": "#DBE6FE",

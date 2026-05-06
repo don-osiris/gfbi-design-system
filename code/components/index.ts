@@ -1,4 +1,4 @@
-// AbuChip — public component surface.
+// GFBI — public component surface.
 // Import paths stay stable so any consumer (Next.js app, deck generator, report renderer)
 // can rely on `@/components/<name>` regardless of internal refactors.
 

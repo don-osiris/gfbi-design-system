@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-// AbuChip ChartFrame — wraps any chart (Recharts, Chart.js, D3, raw SVG)
-// and gives it the AbuChip envelope: eyebrow, title, mono axis labels,
+// GFBI ChartFrame — wraps any chart (Recharts, Chart.js, D3, raw SVG)
+// and gives it the GFBI envelope: eyebrow, title, mono axis labels,
 // legend chips in the approved palette, and a footnote.
 // The chart itself is whatever you pass as children — this is presentation only.
 

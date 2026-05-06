@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// AbuChip Slide — 16:9 deck slide template.
+// GFBI Slide — 16:9 deck slide template.
 // Three layouts: title (cover), content (body), section (divider).
 // Renders at 1920x1080 by default but is fluid via aspect-ratio.
 // Slide number and deck label sit in the bottom rule.
@@ -23,7 +23,7 @@ export function Slide({
   title,
   subtitle,
   number,
-  deckLabel = 'AbuChip',
+  deckLabel = 'GFBI',
   children,
 }: SlideProps) {
   const isTitle   = layout === 'title';

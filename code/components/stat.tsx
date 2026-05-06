@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// AbuChip Stat — KPI tile.
+// GFBI Stat — KPI tile.
 // Mono numeral, sans label. Optional delta with semantic color.
 // Used in dashboards, decks, and report headers.
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// AbuChip Hero — landing-page anchor block.
+// GFBI Hero — landing-page anchor block.
 // Optional gradient-on-cobalt backdrop (the only approved gradient in the system).
 // Mobile-first: stacks vertically, headline scales via clamp().
 

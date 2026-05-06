@@ -1,4 +1,4 @@
-/* AbuChip global styles. Loads bundled Geist .woff2 from /assets/fonts.
+/* GFBI global styles. Loads bundled Geist .woff2 from /assets/fonts.
    Fallback chain: bundled file → system Inter → OS sans-serif.
 
    The font path below is relative; in a Next.js app that drops `code/` into

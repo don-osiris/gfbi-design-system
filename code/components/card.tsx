@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// AbuChip Card — default, accent, data.
+// GFBI Card — default, accent, data.
 // Default: paper-raised on rule border. Accent: cobalt left rule. Data: mono-friendly for KPI blocks.
 
 type Tone = 'default' | 'accent' | 'data';

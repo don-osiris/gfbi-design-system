@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// AbuChip ReportHeader — title block for one-pagers and long-form reports.
+// GFBI ReportHeader — title block for one-pagers and long-form reports.
 // Cobalt eyebrow, oversized headline, ink-muted dek, mono metadata strip.
 
 export interface ReportMeta {

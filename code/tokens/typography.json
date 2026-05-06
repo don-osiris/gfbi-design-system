@@ -1,5 +1,5 @@
 {
-  "description": "AbuChip typography tokens. Geist Sans for everything; Geist Mono only for numbers, data labels, and code. Headlines are oversized and tight; body is generous and readable.",
+  "description": "GFBI typography tokens. Geist Sans for everything; Geist Mono only for numbers, data labels, and code. Headlines are oversized and tight; body is generous and readable.",
   "fontFamily": {
     "sans": ["Geist", "Geist Sans", "Inter", "system-ui", "-apple-system", "sans-serif"],
     "mono": ["Geist Mono", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],

@@ -1,5 +1,5 @@
 {
-  "description": "AbuChip spacing, radius, shadow, and breakpoint tokens. Sharp corners (2px) carry the bold-modern signature. No soft shadows.",
+  "description": "GFBI spacing, radius, shadow, and breakpoint tokens. Sharp corners (2px) carry the bold-modern signature. No soft shadows.",
   "spacing": {
     "0":  "0",
     "px": "1px",
@@ -28,7 +28,7 @@
     "DEFAULT":"2px",
     "md":     "2px",
     "lg":     "2px",
-    "_usage": "Sharp corners are the AbuChip signature. 2px on buttons and cards. 0 on dividers, image frames, and chart axes. Never pill-shaped."
+    "_usage": "Sharp corners are the GFBI signature. 2px on buttons and cards. 0 on dividers, image frames, and chart axes. Never pill-shaped."
   },
   "borderWidth": {
     "0":      "0",

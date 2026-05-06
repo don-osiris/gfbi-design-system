@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-// AbuChip Button — primary, secondary, ghost.
+// GFBI Button — primary, secondary, ghost.
 // Sharp 2px corners. Cobalt primary. 44px tap target on mobile.
 // Always extends native <button> so a11y semantics stay intact.
 

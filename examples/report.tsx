@@ -1,4 +1,4 @@
-// AbuChip example — one-page research report.
+// GFBI example — one-page research report.
 // Verifies: ReportHeader, prose width cap, Card.data for sidebars,
 // plain-language sentences, mono metadata strip.
 

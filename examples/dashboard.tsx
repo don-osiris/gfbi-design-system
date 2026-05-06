@@ -1,4 +1,4 @@
-// AbuChip example — chart panel / dashboard.
+// GFBI example — chart panel / dashboard.
 // Verifies: ChartFrame with monochrome and two-series palettes, Stat row,
 // raw inline SVG bars (no chart lib needed), token colors via CSS vars.
 

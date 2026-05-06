@@ -1,10 +1,10 @@
-# AbuChip
+# GFBI
 
-A personal design system for research and product work. Applied to landing sites, pitch decks, one-page reports, and embedded charts.
+The design system for **Glance Foresight & Behavioral Insights** (GFBI). Applied to landing sites, pitch decks, one-page reports, and embedded charts produced by the team.
 
 Visual signature: cobalt accent on near-black ink and warm off-white paper, sharp 2px corners, Geist typography, oversized headlines, generous whitespace, plain-language copy.
 
-The mark is a cobalt chip frame containing a rising trend line, three observed data points, and a highlighted forecast point — chosen to evoke foresight, behavioral signal, and research, while keeping the chip metaphor in the name.
+The mark is a cobalt chip frame containing a rising trend line, three observed data points, and a highlighted forecast point — built to evoke foresight, behavioral signal, and research-grade rigor.
 
 ---
 
@@ -39,12 +39,12 @@ Once Claude Design has all four, anything it generates — slides, pages, report
 ## What's in this folder
 
 ```
-abuchip-design-system/
+gfbi-design-system/
 ├─ README.md          ← this file (the blurb)
 ├─ NOTES.md           ← the brand-voice + color + typography notes
 ├─ preview.html       ← single-file live preview, no build step
 ├─ assets/
-│  ├─ wordmark.svg/png       cobalt mark + AbuChip wordmark
+│  ├─ wordmark.svg/png       cobalt mark + GFBI wordmark
 │  ├─ wordmark-mono.svg/png  single-color version
 │  ├─ favicon.svg/png        compact mark for tab/icon
 │  ├─ palette.svg/png        visual swatch sheet
@@ -67,7 +67,7 @@ The `examples/` files exist to prove the components compose into real artifacts.
 
 ## The cheat sheet
 
-- **Name:** AbuChip
+- **Name:** GFBI
 - **Primary accent:** `#2563EB` (electric cobalt)
 - **Ink:** `#0F172A`
 - **Paper:** `#FAFAF9`
@@ -85,6 +85,6 @@ Drag `code/` into any Next.js or Vite app and import from `components/`. The Tai
 
 ```ts
 // In a downstream app
-import { Button, Hero, Stat, ChartFrame } from 'abuchip-design-system/code/components';
-import config from 'abuchip-design-system/code/tailwind.config';
+import { Button, Hero, Stat, ChartFrame } from 'gfbi-design-system/code/components';
+import config from 'gfbi-design-system/code/tailwind.config';
 ```

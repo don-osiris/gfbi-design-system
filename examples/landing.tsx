@@ -1,4 +1,4 @@
-// AbuChip example — landing page.
+// GFBI example — landing page.
 // Verifies: Hero (cobalt variant), Card (default + accent), Button, plain-language copy,
 // 2-column grid that collapses to 1 col below sm.
 

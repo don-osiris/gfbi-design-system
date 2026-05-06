@@ -1,4 +1,4 @@
-// AbuChip example — 5-slide pitch deck.
+// GFBI example — 5-slide pitch deck.
 // Layouts used: title (cover), section (divider), content (body x3).
 // Each Slide renders at 16:9; Stat handles the KPI page.
 
@@ -13,7 +13,7 @@ export default function DeckExample() {
         eyebrow="Research deck — Q2 2026"
         title="Why early-career users churn in week two."
         subtitle="Findings from 24 interviews and a 412-respondent diary study."
-        deckLabel="AbuChip"
+        deckLabel="GFBI"
         number={1}
       />
 
@@ -21,7 +21,7 @@ export default function DeckExample() {
         layout="section"
         title="What we found"
         subtitle="Three patterns. One blocker. A clear next step."
-        deckLabel="AbuChip"
+        deckLabel="GFBI"
         number={2}
       />
 
@@ -30,7 +30,7 @@ export default function DeckExample() {
         eyebrow="Pattern 01"
         title="Setup is the cliff, not the feature itself."
         subtitle="Users who finish setup in the first session have a 3.4x higher week-two retention rate."
-        deckLabel="AbuChip"
+        deckLabel="GFBI"
         number={3}
       >
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
@@ -63,7 +63,7 @@ export default function DeckExample() {
         eyebrow="Pattern 02"
         title="The first error message is the moment we lose them."
         subtitle="More than half of churned users hit one of three errors in their first 10 minutes."
-        deckLabel="AbuChip"
+        deckLabel="GFBI"
         number={4}
       >
         <ul className="mt-12 space-y-4 text-xl text-ink-700 max-w-3xl">
@@ -87,7 +87,7 @@ export default function DeckExample() {
         eyebrow="What to do next"
         title="Fix the three errors. Re-test in six weeks."
         subtitle="Engineering can ship the three fixes in one sprint. Re-run the diary study after the change lands."
-        deckLabel="AbuChip"
+        deckLabel="GFBI"
         number={5}
       />
     </div>

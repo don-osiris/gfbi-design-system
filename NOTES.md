@@ -1,6 +1,6 @@
-# AbuChip — design notes
+# GFBI — design notes
 
-These are the rules anything generated under the AbuChip brand must follow. Paste this whole file into the "Any other notes?" field on Claude Design's intake form.
+GFBI is the design system for **Glance Foresight & Behavioral Insights**. These are the rules anything generated under this brand must follow. Paste this whole file into the "Any other notes?" field on Claude Design's intake form.
 
 ---
 
@@ -93,7 +93,7 @@ Verify after deploy: `curl -sI <url>/data.json` returns the expected headers, an
 
 ---
 
-## What AbuChip is not
+## What GFBI is not
 
 - Not soft, not friendly-blob, not pastel, not gradient-heavy.
 - Not minimalist-Swiss either — headlines are bold and oversized, not whisper-thin.
