@@ -4,6 +4,21 @@ A personal design system for research and product work. Applied to landing sites
 
 Visual signature: cobalt accent on near-black ink and warm off-white paper, sharp 2px corners, Geist typography, oversized headlines, generous whitespace, plain-language copy.
 
+The mark is a cobalt chip frame containing a rising trend line, three observed data points, and a highlighted forecast point — chosen to evoke foresight, behavioral signal, and research, while keeping the chip metaphor in the name.
+
+---
+
+## See it live
+
+Open `preview.html` directly in a browser, or serve the folder:
+
+```bash
+python3 -m http.server 8765
+open http://localhost:8765/preview.html
+```
+
+The preview is mobile-verified at 390px and renders every component (hero, KPI tiles, three card tones, single- and two-series charts, a 16:9 slide, a report header, the full palette, and a type specimen). Geist Sans + Geist Mono load from the bundled `.woff2` files in `assets/fonts/`.
+
 ---
 
 ## How to feed this into Claude Design
@@ -12,9 +27,9 @@ The four input fields on Claude Design's intake form map to four parts of this f
 
 | Form field | What to use |
 |---|---|
-| **Company name and blurb** | The first two paragraphs of this README, copied as-is. |
+| **Company name and blurb** | The first three paragraphs of this README, copied as-is. |
 | **Link code from your computer** | Drag the entire `code/` subfolder. |
-| **Add fonts, logos and assets** | Drag everything in the `assets/` subfolder. |
+| **Add fonts, logos and assets** | Drag everything in the `assets/` subfolder, **including `assets/fonts/`** — the bundled Geist `.woff2` files prevent Claude Design from substituting web fonts. |
 | **Any other notes?** | The full contents of `NOTES.md`. |
 
 Once Claude Design has all four, anything it generates — slides, pages, reports, charts — should land already on-brand. If a generation feels off, the gap is almost always something missing in `NOTES.md`; add it and re-upload.
@@ -27,7 +42,16 @@ Once Claude Design has all four, anything it generates — slides, pages, report
 abuchip-design-system/
 ├─ README.md          ← this file (the blurb)
 ├─ NOTES.md           ← the brand-voice + color + typography notes
-├─ assets/            ← wordmark, favicon, palette swatch (SVG + PNG)
+├─ preview.html       ← single-file live preview, no build step
+├─ assets/
+│  ├─ wordmark.svg/png       cobalt mark + AbuChip wordmark
+│  ├─ wordmark-mono.svg/png  single-color version
+│  ├─ favicon.svg/png        compact mark for tab/icon
+│  ├─ palette.svg/png        visual swatch sheet
+│  └─ fonts/
+│     ├─ Geist-{Regular,Medium,SemiBold,Bold}.woff2    primary
+│     ├─ GeistMono-{Regular,Medium,SemiBold}.woff2     numerals/data
+│     └─ OFL.txt                                       license
 ├─ code/
 │  ├─ tokens/         ← colors.json, typography.json, spacing.json
 │  ├─ tailwind.config.ts

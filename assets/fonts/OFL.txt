@@ -1,0 +1,19 @@
+Geist Sans and Geist Mono are licensed under the SIL Open Font License,
+Version 1.1 (OFL-1.1). The full license text is available at:
+
+    https://github.com/vercel/geist-font/blob/main/LICENSE.TXT
+
+Under the OFL-1.1 you are free to use, embed, distribute, and modify
+these fonts, including in commercial products, provided that:
+
+  1. You cannot sell the fonts on their own.
+  2. The reserved font name "Geist" cannot be used to promote a
+     modified version of the font without permission.
+  3. The license text must accompany any redistribution of the fonts.
+
+Geist is © Vercel, Inc. and contributors.
+Source repository: https://github.com/vercel/geist-font
+
+This file is shipped alongside the .woff2 files in this folder so
+downstream consumers (Claude Design, etc.) have the licensing context
+on hand without needing network access.

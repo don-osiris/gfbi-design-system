@@ -1,6 +1,61 @@
-/* AbuChip global styles. Pulls Geist via @import; falls back to Inter then system. */
+/* AbuChip global styles. Loads bundled Geist .woff2 from /assets/fonts.
+   Fallback chain: bundled file → system Inter → OS sans-serif.
 
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+   The font path below is relative; in a Next.js app that drops `code/` into
+   `app/` or `src/`, the assets folder must sit at `/public/assets/fonts/`.
+   In Vite, the same relative path works from the public dir.
+*/
+
+@font-face {
+  font-family: 'Geist';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/Geist-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/Geist-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/Geist-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/Geist-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/GeistMono-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/GeistMono-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Geist Mono';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/GeistMono-SemiBold.woff2') format('woff2');
+}
 
 @tailwind base;
 @tailwind components;

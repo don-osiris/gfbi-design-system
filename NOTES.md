@@ -34,6 +34,7 @@ These are the rules anything generated under the AbuChip brand must follow. Past
 
 ## Typography
 
+- **Brand fonts ship with this folder.** The `assets/fonts/` directory contains the actual Geist Sans (Regular/Medium/SemiBold/Bold) and Geist Mono (Regular/Medium/SemiBold) `.woff2` files plus the OFL license. Use these — do not substitute web fonts.
 - **Geist Sans** for everything: UI, body, headlines.
 - **Geist Mono** for numerals, data labels, table column headers, code, eyebrows.
 - Body copy: `1rem / 1.6` line-height.

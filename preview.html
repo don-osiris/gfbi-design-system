@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AbuChip — design system preview</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Self-contained: bundled Geist .woff2 + Tailwind play CDN with token-driven config. -->
+
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      font-style:  normal; font-weight: 400; font-display: swap;
+      src: url('assets/fonts/Geist-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style:  normal; font-weight: 500; font-display: swap;
+      src: url('assets/fonts/Geist-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style:  normal; font-weight: 600; font-display: swap;
+      src: url('assets/fonts/Geist-SemiBold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style:  normal; font-weight: 700; font-display: swap;
+      src: url('assets/fonts/Geist-Bold.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Geist Mono';
+      font-style:  normal; font-weight: 400; font-display: swap;
+      src: url('assets/fonts/GeistMono-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Geist Mono';
+      font-style:  normal; font-weight: 500; font-display: swap;
+      src: url('assets/fonts/GeistMono-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Geist Mono';
+      font-style:  normal; font-weight: 600; font-display: swap;
+      src: url('assets/fonts/GeistMono-SemiBold.woff2') format('woff2');
+    }
+
+    :root {
+      --abu-primary: #2563EB;
+      --abu-ink:     #0F172A;
+      --abu-paper:   #FAFAF9;
+      --abu-rule:    #E2E8F0;
+    }
+
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    body {
+      font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--abu-paper);
+      color: var(--abu-ink);
+      line-height: 1.6;
+    }
+
+    .eyebrow {
+      font-family: 'Geist Mono', ui-monospace, monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--abu-primary);
+    }
+    .num { font-family: 'Geist Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+    .hero-bg { background: linear-gradient(135deg, #2563EB 0%, #4338CA 100%); }
+    .tight   { letter-spacing: -0.02em; line-height: 1.05; }
+    .wide    { letter-spacing: 0.04em; }
+    ::selection { background: var(--abu-primary); color: white; }
+
+    /* Tap targets at 44px on small screens */
+    @media (max-width: 640px) {
+      .btn { min-height: 44px; }
+    }
+  </style>
+
+  <!-- Tailwind play CDN with AbuChip token map. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50:'#EFF4FF',100:'#DBE6FE',300:'#93B4FD',400:'#608CFA',500:'#3B6CF6',
+              600:'#2563EB',700:'#1D4FD7',800:'#1E41AE',900:'#1E3A8A',
+            },
+            ink:   { 50:'#F8FAFC',100:'#F1F5F9',200:'#E2E8F0',500:'#64748B',600:'#475569',700:'#334155',900:'#0F172A' },
+            paper: { DEFAULT:'#FAFAF9', raised:'#FFFFFF' },
+            rule:  '#E2E8F0',
+            amber: { 600:'#EA580C' },
+            success: '#059669',
+            error:   '#DC2626',
+          },
+          fontFamily: {
+            sans: ['Geist','Inter','system-ui','sans-serif'],
+            mono: ['Geist Mono','ui-monospace','monospace'],
+          },
+          borderRadius: { sm: '2px', DEFAULT: '2px', md: '2px', lg: '2px' },
+          backgroundImage: { 'hero-gradient': 'linear-gradient(135deg, #2563EB 0%, #4338CA 100%)' },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-paper text-ink-900">
+
+  <!-- ======================================================== -->
+  <!-- TOP BAR -->
+  <!-- ======================================================== -->
+  <header class="border-b border-rule sticky top-0 bg-paper/90 backdrop-blur z-10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/favicon.svg" alt="AbuChip" class="w-7 h-7" />
+        <span class="font-semibold tracking-tight">AbuChip</span>
+        <span class="hidden sm:inline-block eyebrow ml-2">Design system preview</span>
+      </a>
+      <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto whitespace-nowrap">
+        <a href="#hero"    class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Hero</a>
+        <a href="#stats"   class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Stats</a>
+        <a href="#cards"   class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Cards</a>
+        <a href="#charts"  class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Charts</a>
+        <a href="#slide"   class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Slide</a>
+        <a href="#report"  class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Report</a>
+        <a href="#palette" class="btn px-3 py-2 text-sm hover:bg-ink-100 rounded-sm">Palette</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- WORDMARKS -->
+  <!-- ======================================================== -->
+  <section class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <p class="eyebrow mb-3">Wordmarks</p>
+    <h2 class="text-3xl sm:text-4xl font-semibold tight mb-6">The mark</h2>
+    <p class="text-lg text-ink-600 max-w-2xl mb-10">
+      A cobalt chip frame containing a rising trend line, three observed data points, and a highlighted forecast point.
+      Reads as research, behavioral signal, and forward-looking foresight — without abandoning the chip metaphor in the name.
+    </p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-paper-raised border border-rule rounded-sm p-8 flex items-center justify-center min-h-[180px]">
+        <img src="assets/wordmark.svg" alt="AbuChip primary wordmark" class="max-w-full h-auto" style="max-height:80px" />
+      </div>
+      <div class="bg-ink-900 border border-ink-900 rounded-sm p-8 flex items-center justify-center min-h-[180px]">
+        <img src="assets/wordmark.svg" alt="AbuChip wordmark on ink" class="max-w-full h-auto invert" style="max-height:80px; filter: invert(1) hue-rotate(180deg);" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- HERO (cobalt variant) -->
+  <!-- ======================================================== -->
+  <section id="hero" class="hero-bg text-white">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+      <p class="font-mono text-xs uppercase wide font-medium text-primary-200 mb-6">Research, faster</p>
+      <h1 class="font-semibold tight" style="font-size: clamp(2.5rem, 7vw, 6rem)">
+        Find the answer before the slide deck is due.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg sm:text-xl text-white/85" style="line-height: 1.55">
+        A research workspace that turns interviews, charts, and notes into a draft you can send.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="#" class="btn inline-flex items-center justify-center h-12 px-6 rounded-sm font-medium bg-white text-primary-700 hover:bg-white/90 transition">Start a project</a>
+        <a href="#" class="btn inline-flex items-center justify-center h-12 px-6 rounded-sm font-medium border border-white/40 text-white hover:bg-white/10 transition">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- STATS -->
+  <!-- ======================================================== -->
+  <section id="stats" class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <p class="eyebrow mb-3">KPI tiles · Stat component</p>
+    <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">Onboarding health · today</h2>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="flex flex-col gap-2">
+        <span class="eyebrow !text-ink-500">Sign-ups today</span>
+        <span class="num font-semibold text-ink-900" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height:1">1,284</span>
+        <span class="num text-sm font-medium text-success">↑ +8.2%</span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <span class="eyebrow !text-ink-500">Setup completion</span>
+        <span class="num font-semibold text-ink-900" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height:1">61<span class="ml-1 text-ink-500 text-base font-sans align-middle">%</span></span>
+        <span class="num text-sm font-medium text-success">↑ +3 pts</span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <span class="eyebrow !text-ink-500">Median TTV</span>
+        <span class="num font-semibold text-ink-900" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height:1">6.4<span class="ml-1 text-ink-500 text-base font-sans align-middle">min</span></span>
+        <span class="num text-sm font-medium text-error">↓ –0.8 min</span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <span class="eyebrow !text-ink-500">Week-two retention</span>
+        <span class="num font-semibold text-ink-900" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height:1">44<span class="ml-1 text-ink-500 text-base font-sans align-middle">%</span></span>
+        <span class="num text-sm font-medium text-ink-500">– flat</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- CARDS -->
+  <!-- ======================================================== -->
+  <section id="cards" class="bg-ink-50/50 border-y border-rule py-20">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="eyebrow mb-3">Cards · Default · Accent · Data</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">Three tones, one frame</h2>
+
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+
+        <div class="bg-paper-raised border border-rule rounded-sm p-4 sm:p-8 shadow-sm">
+          <div class="eyebrow mb-3">01 · Pull it in</div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-3">Default</h3>
+          <p class="text-sm sm:text-base text-ink-700">Upload transcripts, screenshots, and survey exports. We index every quote.</p>
+        </div>
+
+        <div class="bg-paper-raised border border-rule border-l-4 border-l-primary-600 rounded-sm p-4 sm:p-8 shadow-sm">
+          <div class="eyebrow mb-3">02 · Cut to signal</div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-3">Accent</h3>
+          <p class="text-sm sm:text-base text-ink-700">We surface the three points the audience will actually remember.</p>
+        </div>
+
+        <div class="col-span-2 lg:col-span-1 bg-ink-900 text-paper border border-ink-900 rounded-sm p-4 sm:p-8 shadow-sm">
+          <div class="eyebrow !text-primary-300 mb-3">03 · Headline</div>
+          <h3 class="text-lg sm:text-xl font-semibold mb-3 text-paper">Data</h3>
+          <span class="num font-semibold" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height:1">48<span class="ml-1 text-paper/70 text-base font-sans align-middle">pts</span></span>
+          <p class="text-paper/70 mt-2 text-sm">Week-two retention gap, setup-day vs. delayed users.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- CHARTS -->
+  <!-- ======================================================== -->
+  <section id="charts" class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <p class="eyebrow mb-3">Chart frame · single-series + two-series</p>
+    <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">House style charts</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <figure class="bg-paper-raised border border-rule rounded-sm p-6 sm:p-8 shadow-sm">
+        <div class="eyebrow mb-2">Setup completion</div>
+        <h3 class="text-xl font-semibold mb-1">Setup-day completions by month</h3>
+        <p class="text-sm text-ink-600 mb-5">Users who finish setup the same day they sign up.</p>
+        <ul class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
+          <li class="flex items-center gap-2 font-mono text-xs uppercase wide text-ink-700"><span class="inline-block w-3 h-3 rounded-sm" style="background:#2563EB"></span> Same-day setup</li>
+        </ul>
+        <div class="w-full" style="height:260px">
+          <svg viewBox="0 0 600 260" class="w-full h-full" role="img">
+            <g id="bars1"></g>
+            <line x1="20" y1="220" x2="580" y2="220" stroke="#E2E8F0" stroke-width="1"/>
+          </svg>
+        </div>
+        <p class="mt-4 pt-3 border-t border-rule font-mono text-xs uppercase wide text-ink-500">Source · product analytics, 2026-05</p>
+      </figure>
+
+      <figure class="bg-paper-raised border border-rule rounded-sm p-6 sm:p-8 shadow-sm">
+        <div class="eyebrow mb-2">Setup vs. churn</div>
+        <h3 class="text-xl font-semibold mb-1">Same-day setup vs. churned users</h3>
+        <p class="text-sm text-ink-600 mb-5">Two series. Cobalt + amber is the only acceptable two-color pairing.</p>
+        <ul class="flex flex-wrap gap-x-4 gap-y-2 mb-4">
+          <li class="flex items-center gap-2 font-mono text-xs uppercase wide text-ink-700"><span class="inline-block w-3 h-3 rounded-sm" style="background:#2563EB"></span> Same-day setup</li>
+          <li class="flex items-center gap-2 font-mono text-xs uppercase wide text-ink-700"><span class="inline-block w-3 h-3 rounded-sm" style="background:#EA580C"></span> Churned in week two</li>
+        </ul>
+        <div class="w-full" style="height:260px">
+          <svg viewBox="0 0 600 260" class="w-full h-full" role="img">
+            <g id="bars2"></g>
+            <line x1="20" y1="220" x2="580" y2="220" stroke="#E2E8F0" stroke-width="1"/>
+          </svg>
+        </div>
+        <p class="mt-4 pt-3 border-t border-rule font-mono text-xs uppercase wide text-ink-500">Source · product analytics, 2026-05</p>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- SLIDE -->
+  <!-- ======================================================== -->
+  <section id="slide" class="bg-ink-50/50 border-y border-rule py-20">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="eyebrow mb-3">Deck slide · 16:9 · content layout</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">A slide that knows its job</h2>
+
+      <article class="aspect-[16/9] w-full max-w-[1280px] mx-auto bg-paper border border-rule rounded-sm overflow-hidden">
+        <div class="absolute inset-0 flex flex-col p-8 sm:p-12 lg:p-16 relative h-full">
+          <div class="eyebrow mb-8">Pattern 01</div>
+          <h3 class="font-semibold tight" style="font-size: clamp(1.5rem, 4vw, 3rem)">Setup is the cliff, not the feature itself.</h3>
+          <p class="mt-4 text-ink-600 text-base sm:text-xl max-w-3xl" style="line-height:1.45">
+            Users who finish setup in the first session have a 3.4x higher week-two retention rate.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-auto pt-8">
+            <div class="flex flex-col gap-2">
+              <span class="eyebrow !text-ink-500 text-[10px] sm:text-xs">Setup-day retention</span>
+              <span class="num font-semibold text-ink-900" style="font-size: clamp(1.5rem, 3.5vw, 2.5rem); line-height:1">68<span class="ml-1 text-ink-500 font-sans text-sm sm:text-base align-middle">%</span></span>
+              <span class="num text-xs sm:text-sm font-medium text-success">↑ +12 pts</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="eyebrow !text-ink-500 text-[10px] sm:text-xs">Week-two retention</span>
+              <span class="num font-semibold text-ink-900" style="font-size: clamp(1.5rem, 3.5vw, 2.5rem); line-height:1">3.4<span class="ml-1 text-ink-500 font-sans text-sm sm:text-base align-middle">x</span></span>
+              <span class="num text-xs sm:text-sm font-medium text-success">↑ higher</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="eyebrow !text-ink-500 text-[10px] sm:text-xs">Time to first value</span>
+              <span class="num font-semibold text-ink-900" style="font-size: clamp(1.5rem, 3.5vw, 2.5rem); line-height:1">6<span class="ml-1 text-ink-500 font-sans text-sm sm:text-base align-middle">min</span></span>
+              <span class="num text-xs sm:text-sm font-medium text-error">↓ –4 min</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mt-6 sm:mt-8 pt-3 sm:pt-4 border-t border-rule font-mono text-[10px] sm:text-xs uppercase wide text-ink-500">
+            <span>AbuChip</span>
+            <span>03</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- REPORT HEADER -->
+  <!-- ======================================================== -->
+  <section id="report" class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <p class="eyebrow mb-3">Report header · one-pager / long-form</p>
+    <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">Title block</h2>
+
+    <header class="border-b border-rule pb-10">
+      <div class="eyebrow mb-4">Research brief · early-career users</div>
+      <h1 class="font-semibold tight max-w-4xl" style="font-size: clamp(2rem, 5vw, 3.75rem)">
+        Why early-career users churn in week two.
+      </h1>
+      <p class="mt-5 max-w-3xl text-lg sm:text-xl text-ink-600" style="line-height:1.55">
+        Setup friction and three error states explain most of the gap. The fixes are small. The expected lift is large.
+      </p>
+      <dl class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
+        <div class="flex flex-col gap-1"><dt class="font-mono text-xs uppercase wide text-ink-500">Author</dt><dd class="text-sm font-medium num">AC, Research</dd></div>
+        <div class="flex flex-col gap-1"><dt class="font-mono text-xs uppercase wide text-ink-500">Date</dt><dd class="text-sm font-medium num">2026-05-06</dd></div>
+        <div class="flex flex-col gap-1"><dt class="font-mono text-xs uppercase wide text-ink-500">Method</dt><dd class="text-sm font-medium num">24 interviews · 412 surveys</dd></div>
+        <div class="flex flex-col gap-1"><dt class="font-mono text-xs uppercase wide text-ink-500">Status</dt><dd class="text-sm font-medium num">Final v1.0</dd></div>
+      </dl>
+    </header>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- PALETTE -->
+  <!-- ======================================================== -->
+  <section id="palette" class="bg-ink-50/50 border-t border-rule py-20">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="eyebrow mb-3">Palette</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">One accent. Two neutrals. One reserve.</h2>
+
+      <p class="font-mono text-xs uppercase wide font-medium mb-3">Primary · Cobalt</p>
+      <div class="grid grid-cols-3 sm:grid-cols-9 gap-2 mb-6">
+        <div><div class="h-16 rounded-sm" style="background:#EFF4FF"></div><div class="num text-xs mt-1 text-ink-600">50</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#DBE6FE"></div><div class="num text-xs mt-1 text-ink-600">100</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#93B4FD"></div><div class="num text-xs mt-1 text-ink-600">300</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#608CFA"></div><div class="num text-xs mt-1 text-ink-600">400</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#3B6CF6"></div><div class="num text-xs mt-1 text-ink-600">500</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#2563EB"></div><div class="num text-xs mt-1 font-semibold text-primary-700">600 ★</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#1D4FD7"></div><div class="num text-xs mt-1 text-ink-600">700</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#1E41AE"></div><div class="num text-xs mt-1 text-ink-600">800</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#1E3A8A"></div><div class="num text-xs mt-1 text-ink-600">900</div></div>
+      </div>
+
+      <p class="font-mono text-xs uppercase wide font-medium mb-3">Neutrals · Ink + Paper + Rule</p>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
+        <div><div class="h-16 rounded-sm" style="background:#0F172A"></div><div class="num text-xs mt-1 text-ink-600">INK · #0F172A</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#475569"></div><div class="num text-xs mt-1 text-ink-600">INK MUTED · #475569</div></div>
+        <div><div class="h-16 rounded-sm border border-rule" style="background:#FAFAF9"></div><div class="num text-xs mt-1 text-ink-600">PAPER · #FAFAF9</div></div>
+        <div><div class="h-16 rounded-sm border border-rule" style="background:#FFFFFF"></div><div class="num text-xs mt-1 text-ink-600">PAPER RAISED · #FFFFFF</div></div>
+        <div><div class="h-16 rounded-sm" style="background:#E2E8F0"></div><div class="num text-xs mt-1 text-ink-600">RULE · #E2E8F0</div></div>
+      </div>
+
+      <p class="font-mono text-xs uppercase wide font-medium mb-3">Reserve · Charts only</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div><div class="h-16 rounded-sm" style="background:#EA580C"></div><div class="num text-xs mt-1 text-ink-600">AMBER · #EA580C — never decorative</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- TYPE SPECIMEN -->
+  <!-- ======================================================== -->
+  <section class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <p class="eyebrow mb-3">Type · Geist Sans + Geist Mono</p>
+    <h2 class="text-3xl sm:text-4xl font-semibold tight mb-10">Loaded from local .woff2</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <div>
+        <p class="font-mono text-xs uppercase wide text-ink-500 mb-2">Geist Sans · Display</p>
+        <p class="font-semibold tight" style="font-size: clamp(2.5rem, 6vw, 4.5rem)">Bold, but quiet.</p>
+        <hr class="my-6 border-rule" />
+
+        <p class="font-mono text-xs uppercase wide text-ink-500 mb-2">Geist Sans · Body</p>
+        <p class="text-base text-ink-700">
+          The aim is bold but quiet: one loud color, big confident type, sharp corners, plenty of breathing room,
+          and copy that respects the reader's time.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-mono text-xs uppercase wide text-ink-500 mb-2">Geist Mono · Numerals</p>
+        <p class="num text-3xl sm:text-4xl font-semibold">1,284 · 61% · 6.4 min</p>
+        <hr class="my-6 border-rule" />
+
+        <p class="font-mono text-xs uppercase wide text-ink-500 mb-2">Weight ladder</p>
+        <p class="text-2xl font-normal mb-1">400 · Regular running body</p>
+        <p class="text-2xl font-medium mb-1">500 · Medium for labels</p>
+        <p class="text-2xl font-semibold mb-1">600 · Semibold headlines</p>
+        <p class="text-2xl font-bold">700 · Bold for emphasis</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER -->
+  <!-- ======================================================== -->
+  <footer class="border-t border-rule py-10">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <p class="font-mono text-xs uppercase wide text-ink-500">AbuChip · v0.2 · 2026-05</p>
+      <p class="text-sm text-ink-600">
+        Self-contained preview · open this file directly in any browser ·
+        <a href="https://github.com/don-osiris/abuchip-design-system" class="text-primary-600 hover:underline">view source</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Inline data + bar drawing for the two charts above. -->
+  <script>
+    const data = [
+      { label: 'Jan', a: 38, b: 14 }, { label: 'Feb', a: 41, b: 16 },
+      { label: 'Mar', a: 47, b: 19 }, { label: 'Apr', a: 52, b: 22 },
+      { label: 'May', a: 56, b: 25 }, { label: 'Jun', a: 61, b: 28 },
+    ];
+    const max = 70;
+
+    const bars1 = document.getElementById('bars1');
+    data.forEach((d, i) => {
+      const h = (d.a / max) * 200;
+      const x = i * 90 + 40;
+      bars1.insertAdjacentHTML('beforeend', `
+        <rect x="${x}" y="${220-h}" width="48" height="${h}" fill="#2563EB" rx="2"/>
+        <text x="${x+24}" y="240" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="#475569">${d.label}</text>
+        <text x="${x+24}" y="${220-h-6}" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="#0F172A" font-weight="500">${d.a}</text>
+      `);
+    });
+
+    const bars2 = document.getElementById('bars2');
+    data.forEach((d, i) => {
+      const aH = (d.a / max) * 200, bH = (d.b / max) * 200;
+      const x = i * 90 + 30;
+      bars2.insertAdjacentHTML('beforeend', `
+        <rect x="${x}"      y="${220-aH}" width="28" height="${aH}" fill="#2563EB" rx="2"/>
+        <rect x="${x+32}"   y="${220-bH}" width="28" height="${bH}" fill="#EA580C" rx="2"/>
+        <text x="${x+30}"   y="240" text-anchor="middle" font-family="Geist Mono, monospace" font-size="12" fill="#475569">${d.label}</text>
+      `);
+    });
+  </script>
+</body>
+</html>
